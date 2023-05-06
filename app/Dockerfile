@@ -3,8 +3,9 @@ FROM node:14.15.0-alpine3.10
 WORKDIR /usr/share/app
 
 COPY package.json package.json
-COPY node_modules node_modules
 COPY app/server.js app/server.js
+
+RUN npm install
 
 EXPOSE 3000
 

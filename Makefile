@@ -36,3 +36,6 @@ helm-upgrade:
 helm-uninstall:
 	helm uninstall test-chart
 # 	eval $(minikube docker-env)
+
+tunnel: #open external IP for load balancer
+	minikube tunnel

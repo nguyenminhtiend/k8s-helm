@@ -1,6 +1,6 @@
 appserver:
   name: appserver
-  replicas: 3
+  replicas: 1
 
   image:
     name: appserver
@@ -23,16 +23,3 @@ userservice:
   service:
     name: user-service-clusterip-service
     type: ClusterIP
-
-nginx:
-  name: app-nginx
-  replicas: 1
-
-  image:
-    name: app-nginx
-    tag: latest
-    port: 80
-
-  service:
-    name: app-nginx-loadbalancer-service
-    type: LoadBalancer
